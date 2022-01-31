@@ -9,8 +9,13 @@ const Gentleman = ({ gentlemanData }) => {
     firstLetter = gentlemanData.name[0].toUpperCase();
   }
 
+  const selected = gentlemanData.selected;
+  let classSelected = "";
+  if (selected === true) classSelected = "gentleman selected";
+  else classSelected = "gentleman";
+
   return (
-    <li className="gentleman">
+    <li className={classSelected}>
       <div className="gentleman__avatar-container">
         <img
           className="gentleman__avatar"
