@@ -15,8 +15,8 @@ function App() {
       </section>
       <main className="main">
         <ul className="gentlemen">
-          {infoGentlemen.map((gentleman) => {
-            return <Gentleman gentlemanData={gentleman} />;
+          {infoGentlemen.map((gentleman, index) => {
+            return <Gentleman gentlemanData={gentleman} key={index} />;
           })}
         </ul>
       </main>
