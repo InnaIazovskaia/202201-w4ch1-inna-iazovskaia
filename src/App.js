@@ -1,7 +1,9 @@
 import "./App.css";
-import Gentlemen from "./Gentlemen/Gentlemen";
+import Gentleman from "./components/Gentleman/Gentleman";
+import gentlemenData from "./data/gentlemenData";
 
 function App() {
+  const infoGentlemen = gentlemenData;
   return (
     <div className="container">
       <header className="main-header">
@@ -13,7 +15,9 @@ function App() {
       </section>
       <main className="main">
         <ul className="gentlemen">
-          <Gentlemen></Gentlemen>
+          {infoGentlemen.map((gentleman, index) => {
+            return <Gentleman gentlemanData={gentleman} key={index} />;
+          })}
         </ul>
       </main>
     </div>
