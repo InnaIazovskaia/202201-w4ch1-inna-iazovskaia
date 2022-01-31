@@ -1,6 +1,5 @@
 import "./App.css";
 import Gentleman from "./components/Gentleman/Gentleman";
-import "./data/gentlemenData";
 import gentlemenData from "./data/gentlemenData";
 
 function App() {
